@@ -4,7 +4,7 @@
 
 <!-- Create a reference to input text -->
 <input type="text" #parentcomponent (keyup)="0" />
-<p>Value of child component is: </p>
+<p>Value of child component is: {{ ChildData }}</p>
 
 <!-- Event listener, when user types, its value is passed as property to the child component -->
-<app-child [ParentData]="parentcomponent.value"></app-child>
+<app-child [ParentData]="parentcomponent.value" (childEvent)="ChildData=$event"></app-child>
