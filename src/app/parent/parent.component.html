@@ -1,6 +1,10 @@
 <h3>Parent Component</h3>
 
 <label>Bitcoin price </label>
-<input type="text" />
+
+<!-- Create a reference to input text -->
+<input type="text" #parentcomponent (keyup)="0" />
 <p>Value of child component is: </p>
-<app-child></app-child>
+
+<!-- Event listener, when user types, its value is passed as property to the child component -->
+<app-child [ParentData]="parentcomponent.value"></app-child>
