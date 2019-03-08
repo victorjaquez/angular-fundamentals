@@ -20,7 +20,7 @@ export class AppComponent {
   },
   {
     'artist': 'Daddy Yankee',
-    'country': 'Purto Rico'
+    'country': 'Puerto Rico'
   },
   {
      'artist': 'A R Rehman',

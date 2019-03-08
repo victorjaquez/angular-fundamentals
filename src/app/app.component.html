@@ -16,9 +16,22 @@
 </div> -->
 
 
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
   <app-parent></app-parent>
+</div> -->
+
+<div class="container">
+  <h4>NgClass</h4>
+  <div *ngFor="let celeb of singers">
+    <p [ngClass]="{
+      'text-success':celeb.country === 'USA',
+      'text-secondary':celeb.country === 'Canada',
+      'text-danger':celeb.country === 'Puerto Rico',
+      'text-info':celeb.country === 'India'
+    }"> {{celeb.artist}} ({{celeb.country}})
+    </p>
+  </div>
 </div>
